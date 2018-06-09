@@ -1,0 +1,89 @@
+body {
+    font-family: 'Lato', sans-serif;
+    padding: 25px;
+    background-color: #eee;
+    @media (max-width: 576px) {
+        background-color: #fff;
+    }
+    li {
+        cursor: pointer;
+    }
+    #top-section {
+        background-color: white;
+        padding: 25px;
+        margin-bottom: 25px;
+        .navbar {
+            background-color: white;
+            border: none;
+            list-style: none;
+            @media (max-width: 992px) {
+                text-align: center;
+            }
+            .navbar-nav {
+                @media (max-width: 992px) {
+                    float: none;
+                }
+                @media (max-width: 576px) {
+                    float: right;
+                    margin: 0;
+                }
+            }
+            .navbar-brand {
+                font-size: 2.4rem;
+                color: #333;
+                padding-left: 0;
+            }
+            .modal-title {
+                text-align: center;
+            }
+            .modal-body {
+                font-size: 1.5rem;
+                p {
+                    padding: 20px;
+                    #uploadImage {
+                        display: inline-grid;
+                        padding: 0 10px;
+                    }
+                }
+            }
+            .btn {
+                background-color: #333;
+                color: white;
+                border-radius: 4px;
+            }
+            .flag-list {
+                list-style: none;
+                display: flex;
+                flex-direction: row-reverse;
+                .thumbnail {
+                    border: none;
+                }
+            }
+            .form-control {
+                width: 300px;
+                padding: 15px;
+                background-image: url('../assets/icons/search.png');
+                background-size: 18px;
+                background-repeat: no-repeat;
+                background-position: right;
+            }
+        }
+    }
+    .image-list {
+        text-align: center;
+        list-style: none;
+        img {
+            box-shadow: 1px 1px 1px grey;
+            width: 100%;
+        }
+        .caption {
+            font-size: 1.5rem;
+        }
+        @media (max-width: 576px) {
+            .image-list ul,
+            li {
+                padding: 0;
+            }
+        }
+    }
+}

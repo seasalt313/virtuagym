@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Virtuagym Coding</title>
+  <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="styles/main.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+</head>
+
+<body>
+  <div id='top-section'>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header col-sm-12 col-md-4">
+          <a class="navbar-brand col-xs-6 col-sm-12 col-md-4" href="#">Groups</a>
+          <ul class="nav navbar-nav col-xs-6 col-sm-12 col-md-3">
+            <li>
+              <button type="button" class="btn navbar-btn" data-toggle="modal" data-target="#groupModal">
+                Add New Group
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="groupModal" tabindex="-1" role="dialog" aria-labelledby="groupModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="groupModalLabel">Add New Group
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </h5>
+
+              </div>
+              <div class="modal-body">
+                <p> Group Name:
+                  <input type="text" id="addGroupInput" class="new-group-title">
+                </p>
+                <p> Group Image:
+                  <input type="file" id="uploadImage" accept="image/gif, image/jpeg, image/png">
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn" data-dismiss="modal">Close</button>
+                <button type="button" class="btn" onclick="addGroup()" data-dismiss="modal">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Only show language selection on large screens -->
+        <ul class="flag-list hidden-sm hidden-xs hidden-md col-lg-8"></ul>
+
+      </div>
+      <!-- Search for images-->
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" id="searchInput" onkeyup="filter()" placeholder="Search">
+        </div>
+      </form>
+    </nav>
+  </div>
+
+  <!-- List of Images with Captions -->
+  <div>
+    <ul class="col-sm-12 image-list">
+    </ul>
+  </div>
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="dist/js/bootstrap.min.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
